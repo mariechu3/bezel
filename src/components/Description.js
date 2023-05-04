@@ -19,17 +19,25 @@ const Description = () => {
     }, [])
     return (
         <>
-            <div >
+            <div className={styles.wrapping}>
                 {watch.listing &&
                     <div>
-                        {watch.listing.model.brand.name} {watch.listing.model.name}
-                        <img className={styles.image} src={watch.listing.images[0].image.url} /><br />
-                        {watch.listing.condition} / {watch.listing.manufactureYear} <br />
-                        {/* Selling Price ${watch.listing.salePriceCents} <br />
-                        Level 1 Commission ${watch.listing.commissionRateBips} <br />
-                        Seller fee ${watch.listing.sellerFeeCents} <br />
-                        Insured Shipping Free
-                        Bezel authentication Free */}
+                        <div className={styles.container}>
+                            <div className={styles.name}>
+                            {watch.listing.model.brand.name} {watch.listing.model.name}<br/>
+                            {watch.listing.condition} / {watch.listing.manufactureYear} <br />
+                            </div>
+                            <img className={styles.image} src={watch.listing.images[0].image.url} /><br />
+                        </div>
+                        <div className={styles.container}>
+                            <br/>
+                            Selling Price {(watch.salePriceCents / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })} <br />
+                            Level 1 Commission {(watch.commissionRateBips / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })} <br />
+                            Seller fee {(watch.sellerFeeCents / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })} <br />
+                            Insured Shipping Free <br />
+                            Bezel authentication Free <br />
+                        </div>
+                        Earnings {(watch.payoutAmountCents / 100).toLocaleString("en-US", { style: "currency", currency: "USD" })}
                     </div>
                 }
             </div>

@@ -19,7 +19,7 @@
 }
 
 .modal {
-  width: 600px;
+  width: 700px;
   height: 400px;
   background: white;
   color: black;
@@ -71,7 +71,7 @@
   bottom: 2px;
   margin-bottom: 10px;
   width: 100%; */
-  width: 50%;
+  width: 45%;
   padding: 5%;
   float:left;
 }

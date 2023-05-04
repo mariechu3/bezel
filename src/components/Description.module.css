@@ -1,11 +1,30 @@
 .image{
-    width:10%;
+    width:20%;
+    float:right;
+    position:absolute
 }
 .wrapping{
-    background-color: rgb(167, 164, 164);
-    width:50%;
+    background-color: rgb(209, 207, 207);
+    width:35%;
+    margin:5%;
+    padding:5%;
     border-radius: 5%;
     margin:5%;
-    /* width: 100%; */
+    position:absolute;
     float: right;
+    margin-left:50%;
+    height:60%;
+}
+
+.container{
+    border-top-color:black;
+    border-top: 2px;
+    /* background-color: aquamarine; */
+    padding-top: 2.5%;
+    padding-bottom: 20%
+}
+
+.name{
+    float: left;
+    margin-bottom:20%;
 }
