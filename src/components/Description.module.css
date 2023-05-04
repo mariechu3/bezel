@@ -1,0 +1,11 @@
+.image{
+    width:10%;
+}
+.wrapping{
+    background-color: rgb(167, 164, 164);
+    width:50%;
+    border-radius: 5%;
+    margin:5%;
+    /* width: 100%; */
+    float: right;
+}
